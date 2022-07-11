@@ -2,7 +2,20 @@
     background-color: #2E2645;
 }
 
+.main-navbar .navbar-toggler{
+    background-color: #8672ED
+    ;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
 
+.btn{
+    background-color: #8672ED    ;
+    color: #fff;
+    border-radius: 3.125rem;
+    width: 14.375rem;
+}
 .footer{
     background-color: #2E2645;
     color: #fff ;
@@ -18,5 +31,21 @@ html,body, #root{
 }
 
 #root > main{
+    flex: 1;
+}
+
+.banner-home p{
+    color: #CED4DA;
+    font-size: 1rem;
+}
+
+.banner-home h1{
+    color: #FFF;
+    font-size: 4.5;
+}
+
+
+
+.banner-home > div{
     flex: 1;
 }
