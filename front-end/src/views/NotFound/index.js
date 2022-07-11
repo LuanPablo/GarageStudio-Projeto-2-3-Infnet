@@ -1,3 +1,4 @@
+import { Layout } from "../../componentes/Layout";
 
 export function NotFoundView() {
     return (
