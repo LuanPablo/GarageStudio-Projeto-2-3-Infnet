@@ -1,6 +1,7 @@
 import { Button, Container } from "react-bootstrap";
 import { Layout } from "../../componentes/Layout";
 import Banner from '../../Assets/img/banner.png'
+import { Link } from "react-router-dom";
 
 export function HomeView() {
     return (
