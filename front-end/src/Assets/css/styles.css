@@ -1,50 +1,53 @@
-.main-navbar{
+.main-navbar {
     background-color: #2E2645;
 }
 
-.main-navbar .navbar-toggler{
-    background-color: #8672ED
-    ;
+.main-navbar .navbar-toggler {
+    background-color: #8672ED;
 }
-.navbar-light .navbar-nav .nav-link{
+
+.navbar-light .navbar-nav .nav-link {
     color: #fff;
 }
 
-.btn{
-    background-color: #8672ED    ;
+.btn {
+    background-color: #8672ED;
     color: #fff;
     border-radius: 3.125rem;
     width: 14.375rem;
 }
-.footer{
+
+.footer {
     background-color: #0C0A12;
-    color: #fff ;
+    color: #fff;
 }
 
-html,body, #root{
+html,
+body,
+#root {
     height: 100%;
     background-color: #1D182C;
 }
 
-#root{
+#root {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
-#root > main{
+#root>main {
     flex: 1;
 }
 
-.banner-home p{
-    color: #CED4DA;   
+.banner-home p {
+    color: #CED4DA;
     font-size: 1rem;
 }
 
-.banner-home h1{
+.banner-home h1 {
     color: #FFF;
-    font-size:4.5rem;
+    font-size: 4.5rem;
 }
 
-.banner-home > div{
+.banner-home>div {
     flex: 1;
 }
