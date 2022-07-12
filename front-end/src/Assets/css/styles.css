@@ -23,12 +23,12 @@
 
 html,body, #root{
     height: 100%;
+    background-color: #1D182C;
 }
 
 #root{
     display: flex;
-    flex-direction: column;
-    background-color: #1D182C;
+    flex-direction: column;  
 }
 
 #root > main{
@@ -42,7 +42,7 @@ html,body, #root{
 
 .banner-home h1{
     color: #FFF;
-    font-size: 4.5;
+    font-size:4.5rem;
 }
 
 .banner-home > div{
