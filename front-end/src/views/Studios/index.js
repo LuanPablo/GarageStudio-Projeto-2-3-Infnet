@@ -1,48 +1,39 @@
-import { Col, Container, Row } from "react-bootstrap";
-import { CardStudio } from "../../componentes/CardStudios";
+import { useEffect, useState } from "react";
+import { Alert, Col, Container, Row } from "react-bootstrap";
+import { CardStudio } from "../../componentes/CardStudio";
 import { Layout } from "../../componentes/Layout";
-
-const studios = [
-    {
-        id: 1,
-        name: 'Mesquita GS',
-        shortDescription: 'Bla',
-    },
-    {
-        id: 2,
-        name: 'Mesquita GS',
-        shortDescription: 'Bla',
-    },
-    {
-        id: 3,
-        name: 'Mesquita GS',
-        shortDescription: 'Bla',
-    },
-    {
-        id: 4,
-        name: 'Mesquita GS',
-        shortDescription: 'Bla',
-    },
-    {
-        id: 5,
-        name: 'Mesquita GS',
-        shortDescription: 'Bla',
-    },
-    {
-        id: 6,
-        name: 'Mesquita GS',
-        shortDescription: 'Bla',
-    },
-]
+import { Loading } from "../../componentes/Loading";
 
 export function StudiosView() {
+    const [studios, setStudios] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [erroMsg, setErrorMsg] = useState()
+    useEffect(() => {
+        fetch('http://localhost:3000/studios')
+            .then((responde) => responde.json())
+            .then((data) => {
+                setStudios(data)
+                setLoading(false)
+            })
+            .catch(() => {
+                setErrorMsg('Recarregue a página')
+                setLoading(false)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [])
     return (
         <Layout>
             <Container>
                 <h2 className="text-center mt-4">Escolha seu estúdio</h2>
+                {loading && (<Loading />)}
+                {erroMsg && (
+                    <Alert variant="danger">{erroMsg}</Alert>
+                )}
                 <Row>
                     {studios.map(studios => (
-                        <Col key={studios.id} lg={4}>
+                        <Col key={studios.id} className='mb-4' lg={4}>
                             <CardStudio studios={studios} />
                         </Col>
                     ))}

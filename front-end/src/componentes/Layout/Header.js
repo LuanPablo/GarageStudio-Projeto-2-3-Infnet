@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Logo from '../../Assets/img/logo.png'
+import Logo from '../../assets/img/logo.png'
 
 export function Header() {
   return (
