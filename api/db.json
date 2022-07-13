@@ -1,37 +1,37 @@
 {
     "studios": [
         {
-            "image": "/images/mesquita.jpg",
+            "image": "/img/mesquita.png",
             "name": "Mesquita GS",
             "shortDescription": "Bla",
             "id": 1
         },
         {
-            "image": "/images/cachambi.png",
+            "image": "/img/cachambi.png",
             "name": "Cachambi GS",
             "shortDescription": "Bla",
             "id": 2
         },
         {
-            "image": "/images/afranio.png",
+            "image": "/img/afranio.png",
             "name": "Afrânio Franco GS",
             "shortDescription": "Bla",
             "id": "3"
         },
         {
-            "image": "/images/senhor.png",
+            "image": "/img/senhor.png",
             "name": "Senhor dos Passos GS",
             "shortDescription": "Bla",
             "id": "4"
         },
         {
-            "image": "/images/madureira.png",
+            "image": "/img/madureira.png",
             "name": "Madureira GS",
             "shortDescription": "Bla",
             "id": "5"
         },
         {
-            "image": "/images/copacabana.png",
+            "image": "/img/copacabana.png",
             "name": "Copacabana GS",
             "shortDescription": "Bla",
             "id": "6"

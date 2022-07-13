@@ -13,7 +13,6 @@ export function StudiosView() {
             .then((responde) => responde.json())
             .then((data) => {
                 setStudios(data)
-                setLoading(false)
             })
             .catch(() => {
                 setErrorMsg('Recarregue a página')
