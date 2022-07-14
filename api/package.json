@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json --port $PORT --host 0.0.0.0"
+    "start": "json-server --watch db.json --port $PORT --host 0.0.0.0",
+    "start-dev": "cross-env PORT=3000 npm run start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "json-server": "^0.17.0"
   }
 }
