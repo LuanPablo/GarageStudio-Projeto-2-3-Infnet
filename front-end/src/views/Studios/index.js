@@ -9,7 +9,7 @@ export function StudiosView() {
     const [loading, setLoading] = useState(true)
     const [erroMsg, setErrorMsg] = useState()
     useEffect(() => {
-        fetch('http://localhost:3000/studios')
+        fetch(`${process.env.REACT_APP_API_URL}/studios`)
             .then((responde) => responde.json())
             .then((data) => {
                 setStudios(data)
