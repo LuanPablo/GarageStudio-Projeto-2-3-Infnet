@@ -11,6 +11,8 @@ function App() {
       <Route path='/studios' element={<StudiosView />} />
       <Route path='*' element={<NotFoundView />} />
       <Route path='/studios/:id' element={<StudioDetailView />} />
+      
+      
     </Routes>
   )
 }

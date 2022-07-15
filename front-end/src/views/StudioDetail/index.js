@@ -9,12 +9,12 @@ import { Schedulings } from "./Schedulings";
 
 export function StudioDetailView() {
     const { id } = useParams()
-    const [studios, setStudio] = useState()
+    const [studio, setStudio] = useState()
     const [loading, setLoading] = useState(true)
     const [errorMsg, setErrorMsg] = useState()
     useEffect(() => {
         // fetch(`${process.env.REACT_APP_API_URL}/studios`)
-        const fetchStudios = async () => {
+        const fetchStudio = async () => {
             try {
                 const response = await fetch(`http://localhost:3001/studios/${id}?_embed=schedulings`)
                 if (!response.ok) {
@@ -22,7 +22,7 @@ export function StudioDetailView() {
                 }
                 const data = await response.json()
                 setStudio(data)
-                setStudio(false)
+                setLoading(false)
             } catch (err) {
                 const message = err.message === 'Response not ok.'
                     ? '404'
@@ -32,7 +32,7 @@ export function StudioDetailView() {
                 setLoading(false)
             }
         }
-        fetchStudios()
+        fetchStudio()
     }, [id])
 
     if (loading) {
@@ -45,12 +45,10 @@ export function StudioDetailView() {
         <Layout>
             <Container>
                 {errorMsg ? (
-                    <Alert variant="danger" className="mt-3">
-                        {errorMsg}
-                    </Alert>
+                    <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
                 ) : (
                     <>
-                        <Schedulings schedulings={studios.schedulings} />
+                        <Schedulings schedulings={studio.schedulings} />
                     </>
                 )}
             </Container>
