@@ -4,38 +4,55 @@
             "image": "/img/mesquita.png",
             "name": "Mesquita GS",
             "shortDescription": "Bla",
-            "id": "1"
+            "id": 1
         },
         {
             "image": "/img/cachambi.png",
             "name": "Cachambi GS",
             "shortDescription": "Bla",
-            "id": "2"
+            "id": 2
         },
         {
             "image": "/img/afranio.png",
             "name": "Afrânio Franco GS",
             "shortDescription": "Bla",
-            "id": "3"
+            "id": 3
         },
         {
             "image": "/img/senhor.png",
             "name": "Senhor dos Passos GS",
             "shortDescription": "Bla",
-            "id": "4"
+            "id": 4
         },
         {
             "image": "/img/madureira.png",
             "name": "Madureira GS",
             "shortDescription": "Bla",
-            "id": "5"
+            "id": 5
         },
         {
             "image": "/img/copacabana.png",
             "name": "Copacabana GS",
             "shortDescription": "Bla",
-            "id": "6"
+            "id": 6
         } 
     ],
-    "scheduling" :[]
+    "schedulings":[
+        {
+            "service": "Ensaio",
+            "day": "10/07/2022",
+            "hour": "16:00",
+            "scheduling": "true",
+            "studioId": 1,
+            "id":7
+        },
+        {
+            "service": "Ensaio",
+            "day": "10/07/2022",
+            "hour": "16:00",
+            "scheduling": "true",
+            "studioId": 1,
+            "id":8   
+        }
+    ]
 }

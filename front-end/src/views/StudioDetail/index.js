@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { Layout } from "../../componentes/Layout";
 import { Loading } from "../../componentes/Loading";
 import { NotFoundView } from "../NotFound/";
+import { Schedulings } from "./Schedulings";
+
 
 export function StudioDetailView() {
     const { id } = useParams()
@@ -14,7 +16,7 @@ export function StudioDetailView() {
         // fetch(`${process.env.REACT_APP_API_URL}/studios`)
         const fetchStudios = async () => {
             try {
-                const response = await fetch(`http://localhost:3001/studios/${id}`)
+                const response = await fetch(`http://localhost:3001/studios/${id}?_embed=schedulings`)
                 if (!response.ok) {
                     throw new Error('Response not ok.')
                 }
@@ -47,7 +49,9 @@ export function StudioDetailView() {
                         {errorMsg}
                     </Alert>
                 ) : (
-                    <h1>{studios?.name}</h1>
+                    <>
+                        <Schedulings schedulings={studios.schedulings} />
+                    </>
                 )}
             </Container>
         </Layout>
