@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { HomeView } from "./views/Home";
 import { NotFoundView } from "./views/NotFound";
+import { StudioDetailView } from "./views/StudioDetail";
 import { StudiosView } from "./views/Studios";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Route path='/' element={<HomeView />} />
       <Route path='/studios' element={<StudiosView />} />
       <Route path='*' element={<NotFoundView />} />
-      
+      <Route path='/studios/:id' element={<StudioDetailView />} />
     </Routes>
   )
 }

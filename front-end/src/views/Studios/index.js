@@ -9,14 +9,14 @@ export function StudiosView() {
     const [loading, setLoading] = useState(true)
     const [erroMsg, setErrorMsg] = useState()
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/studios`)
+        // fetch(`${process.env.REACT_APP_API_URL}/studios`)
+        fetch(`http://localhost:3001/studios`)
             .then((responde) => responde.json())
             .then((data) => {
                 setStudios(data)
             })
             .catch(() => {
                 setErrorMsg('Recarregue a página')
-                setLoading(false)
             })
             .finally(() => {
                 setLoading(false)
