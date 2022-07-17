@@ -1,10 +1,9 @@
-import { useState } from "react";
-import { Alert, Button, Form, FormCheck, Table } from "react-bootstrap";
+import { Alert, Button, Table,} from "react-bootstrap";
 
 export function Schedulings({ schedulings }) {
     return (
         <>
-            <h2 as="h1">Horários disponíveis</h2>
+            <h2>Horários disponíveis</h2>
             {schedulings.length > 0 ? (
                 <Table responsive>
                     <thead >

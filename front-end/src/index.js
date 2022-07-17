@@ -4,6 +4,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Assets/css/styles.css';
 import { BrowserRouter } from 'react-router-dom';
+import { GlobalStyle } from './Assets/global'
 
 
 ReactDOM.render(

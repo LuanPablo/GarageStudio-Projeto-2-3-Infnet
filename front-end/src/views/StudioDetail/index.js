@@ -3,8 +3,9 @@ import { Alert, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Layout } from "../../componentes/Layout";
 import { Loading } from "../../componentes/Loading";
+import { getStudioById } from "../../services/Studios.service";
 import { NotFoundView } from "../NotFound/";
-import { Schedulings } from "./schedulings";
+import { Schedulings } from "./Schedulings";
 
 
 export function StudioDetailView() {
@@ -13,21 +14,16 @@ export function StudioDetailView() {
     const [loading, setLoading] = useState(true)
     const [errorMsg, setErrorMsg] = useState()
     useEffect(() => {
-        // fetch(`${process.env.REACT_APP_API_URL}/studios`)
+
         const fetchStudio = async () => {
             try {
-                const response = await fetch(`http://localhost:3001/studios/${id}?_embed=schedulings`)
-                if (!response.ok) {
-                    throw new Error('Response not ok.')
-                }
-                const data = await response.json()
+                const data = await getStudioById(id)
                 setStudio(data)
                 setLoading(false)
             } catch (err) {
                 const message = err.message === 'Response not ok.'
                     ? '404'
                     : 'Falha'
-
                 setErrorMsg(message)
                 setLoading(false)
             }

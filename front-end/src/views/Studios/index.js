@@ -3,6 +3,7 @@ import { Alert, Col, Container, Row } from "react-bootstrap";
 import { CardStudio } from "../../componentes/CardStudio";
 import { Layout } from "../../componentes/Layout";
 import { Loading } from "../../componentes/Loading";
+import { getStudios } from "../../services/Studios.service";
 
 export function StudiosView() {
     const [studios, setStudios] = useState([])
@@ -10,17 +11,16 @@ export function StudiosView() {
     const [erroMsg, setErrorMsg] = useState()
     useEffect(() => {
         // fetch(`${process.env.REACT_APP_API_URL}/studios`)
-        fetch(`http://localhost:3001/studios`)
-            .then((responde) => responde.json())
-            .then((data) => {
+        const fetchStudios = async () =>{
+            try {
+                const data = await getStudios()
                 setStudios(data)
-            })
-            .catch(() => {
+            } catch (error) {
                 setErrorMsg('Recarregue a página')
-            })
-            .finally(() => {
-                setLoading(false)
-            })
+            }
+            setLoading(false)
+        }
+        fetchStudios()
     }, [])
     return (
         <Layout>
