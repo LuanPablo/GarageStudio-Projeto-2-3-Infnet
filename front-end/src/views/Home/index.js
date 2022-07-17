@@ -16,7 +16,7 @@ export function HomeView() {
             <h1>A maior rede de estúdios</h1>
             <p>A Garage Studio é uma rede de referência especializada em</p>
             <p>gravação, produção musical, mixagem, masterização.</p>
-            <Button as={Link} to='/studios' className='text-uppercase'>Agendar</Button>
+            <Button as={Link} to='/studios' className='text-uppercase btn-agendar'>Agendar</Button>
           </div>
 
         </div>

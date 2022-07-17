@@ -1,12 +1,13 @@
-import { Alert, Table } from "react-bootstrap";
+import { useState } from "react";
+import { Alert, Button, Form, FormCheck, Table } from "react-bootstrap";
 
 export function Schedulings({ schedulings }) {
     return (
         <>
-            <h1>Horários disponíveis</h1>
+            <h2 as="h1">Horários disponíveis</h2>
             {schedulings.length > 0 ? (
                 <Table responsive>
-                    <thead>
+                    <thead >
                         <tr>
                             <th>Serviço</th>
                             <th>Dia</th>
@@ -20,11 +21,16 @@ export function Schedulings({ schedulings }) {
                                 <td>{scheduling.service}</td>
                                 <td>{scheduling.day}</td>
                                 <td>{scheduling.hour}</td>
+                                <td><Button
+                                    type="submit">
+                                    Agendar
+                                </Button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
                 </Table>
-            ):(
+            ) : (
                 <Alert variant="info">
                     Não possui horários cadastrados
                 </Alert>

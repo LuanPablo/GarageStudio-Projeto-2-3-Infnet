@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Layout } from "../../componentes/Layout";
 import { Loading } from "../../componentes/Loading";
 import { NotFoundView } from "../NotFound/";
-import { Schedulings } from "./Schedulings";
+import { Schedulings } from "./schedulings";
 
 
 export function StudioDetailView() {

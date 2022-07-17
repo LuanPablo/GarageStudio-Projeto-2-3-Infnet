@@ -48,11 +48,43 @@
         },
         {
             "service": "Ensaio",
-            "day": "10/07/2022",
+            "day": "11/07/2022",
             "hour": "16:00",
             "scheduling": "true",
-            "studioId": 1,
+            "studioId": 2,
             "id":8   
+        },
+        {
+            "service": "Ensaio",
+            "day": "11/07/2022",
+            "hour": "16:00",
+            "scheduling": "true",
+            "studioId": 3,
+            "id":9  
+        },
+        {
+            "service": "Ensaio",
+            "day": "11/07/2022",
+            "hour": "16:00",
+            "scheduling": "true",
+            "studioId": 4,
+            "id":10  
+        },
+        {
+            "service": "Ensaio",
+            "day": "11/07/2022",
+            "hour": "16:00",
+            "scheduling": "true",
+            "studioId": 5,
+            "id":11  
+        },
+        {
+            "service": "Ensaio",
+            "day": "11/07/2022",
+            "hour": "16:00",
+            "scheduling": "true",
+            "studioId": 6,
+            "id":12   
         }
     ]
 }
