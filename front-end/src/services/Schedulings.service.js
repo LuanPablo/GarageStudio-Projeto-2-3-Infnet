@@ -1,7 +1,7 @@
 import { apiUrl, getAuthorizationHeaders } from "./Api.service"
 
-export const createScheduling = async (inscriptionData) => {
-  const response = await fetch(`${apiUrl}/inscriptions`, {
+export const createScheduling = async (schedulingData) => {
+  const response = await fetch(`${apiUrl}/schedulings`, {
     method: 'POST',
     body: JSON.stringify(inscriptionData),
     headers: {
