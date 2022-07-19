@@ -6,9 +6,9 @@ import './Assets/css/styles.css';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyle } from './Assets/global'
 
-
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <BrowserRouter>
       <App />
     </BrowserRouter>
