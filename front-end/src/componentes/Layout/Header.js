@@ -20,9 +20,9 @@ export function Header () {
             <Nav.Link as={Link} to='/'>Home</Nav.Link>
             <Nav.Link as={Link} to='/studios'>Agendar</Nav.Link>
               {isUserLoggedIn ? (
-                <NavLinkStyled forwardedAs={Link} to='/portal'>Entrar</NavLinkStyled>
+                <Nav.Link forwardedAs={Link} to='/portal'>Entrar</Nav.Link>
               ) : (
-                <NavLinkStyled forwardedAs={Link} to='/portal/login'>Login</NavLinkStyled>
+                <Nav.Link forwardedAs={Link} to='/portal/login'>Login</Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>
