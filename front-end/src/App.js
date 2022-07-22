@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { PrivateRoute } from "./componentes/PrivateRoute";
 import { DashboardView } from "./views/Dashboard";
 import { HomeView } from "./views/Home";
 import { LoginView } from "./views/Login";
@@ -14,7 +15,12 @@ function App() {
       <Route path='*' element={<NotFoundView />} />
       <Route path='/portal/login' element={<LoginView />} />
       <Route path='/studios/:id' element={<StudioDetailView />} />
-      <Route path='/portal' element={<DashboardView/>} />
+      <Route path='/portal' element={
+        <PrivateRoute>
+          <DashboardView />
+        </PrivateRoute>
+      } 
+      />
     </Routes>
   )
 }
