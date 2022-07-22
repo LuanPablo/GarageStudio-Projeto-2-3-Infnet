@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "studios": [
         {
             "image": "/img/mesquita.png",
@@ -87,4 +88,78 @@
             "id":12   
         }
     ]
+=======
+  "studios": [
+    {
+      "image": "/img/mesquita.png",
+      "name": "Mesquita GS",
+      "shortDescription": "Bla",
+      "id": 1
+    },
+    {
+      "image": "/img/cachambi.png",
+      "name": "Cachambi GS",
+      "shortDescription": "Bla",
+      "id": 2
+    },
+    {
+      "image": "/img/afranio.png",
+      "name": "Afrânio Franco GS",
+      "shortDescription": "Bla",
+      "id": 3
+    },
+    {
+      "image": "/img/senhor.png",
+      "name": "Senhor dos Passos GS",
+      "shortDescription": "Bla",
+      "id": 4
+    },
+    {
+      "image": "/img/madureira.png",
+      "name": "Madureira GS",
+      "shortDescription": "Bla",
+      "id": 5
+    },
+    {
+      "image": "/img/copacabana.png",
+      "name": "Copacabana GS",
+      "shortDescription": "Bla",
+      "id": 6
+    }
+  ],
+  "schedulings": [
+    {
+      "service": "Ensaio",
+      "day": "10/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 1,
+      "id": 7
+    },
+    {
+      "service": "Ensaio",
+      "day": "10/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 1,
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "email": "cliente@cliente.com",
+      "password": "$2a$10$VtBFTXf0Gqf4DxHJnysXEeS.PoXVFanY/BEnv4/NV4cAGGb3FVMX2",
+      "name": "Cliente",
+      "type": "2",
+      "id": 1
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "$2a$10$dxTMEIhEqRiCKLyYEMxpJeMpGNsMxvSLDtkhlRwHREM35ElwW4H7m",
+      "name": "Administrador",
+      "type": "1",
+      "id": 2
+    }
+  ]
+>>>>>>> parte-2
 }

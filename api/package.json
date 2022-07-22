@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json --port 3001"
+    "start": "json-server-auth --watch db.json --port 3001 -r routes.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cross-env": "^7.0.3",
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0"
   }
 }

@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { DashboardView } from "./views/Dashboard";
 import { HomeView } from "./views/Home";
+import { LoginView } from "./views/Login";
 import { NotFoundView } from "./views/NotFound";
 import { StudioDetailView } from "./views/StudioDetail";
 import { StudiosView } from "./views/Studios";
@@ -11,6 +12,7 @@ function App() {
       <Route path='/' element={<HomeView />} />
       <Route path='/studios' element={<StudiosView />} />
       <Route path='*' element={<NotFoundView />} />
+      <Route path='/portal/login' element={<LoginView />} />
       <Route path='/studios/:id' element={<StudioDetailView />} />
       <Route path='/portal' element={<DashboardView/>} />
     </Routes>
