@@ -10,11 +10,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "cross-env": "^7.0.3",
     "json-server": "^0.17.0",
     "json-server-auth": "^2.1.0"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.3"
+    
   }
 }
