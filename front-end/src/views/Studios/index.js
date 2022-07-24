@@ -9,8 +9,9 @@ export function StudiosView() {
     const [studios, setStudios] = useState([])
     const [loading, setLoading] = useState(true)
     const [erroMsg, setErrorMsg] = useState()
+    
     useEffect(() => {
-        // fetch(`${process.env.REACT_APP_API_URL}/studios`)
+        
         const fetchStudios = async () =>{
             try {
                 const data = await getStudios()

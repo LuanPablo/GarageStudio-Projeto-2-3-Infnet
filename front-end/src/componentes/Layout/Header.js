@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Logo from '../../assets/img/logo-infnet.png'
+import Logo from '../../Assets/img/logo.png'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
 import { selectIsUserLoggedIn } from "../../store/User/User.selectors";
@@ -20,9 +20,9 @@ export function Header () {
             <Nav.Link as={Link} to='/'>Home</Nav.Link>
             <Nav.Link as={Link} to='/studios'>Agendar</Nav.Link>
               {isUserLoggedIn ? (
-                <Nav.Link forwardedAs={Link} to='/portal'>Entrar</Nav.Link>
+                <Nav.Link as={Link} to='/portal'>Entrar</Nav.Link>
               ) : (
-                <Nav.Link forwardedAs={Link} to='/portal/login'>Login</Nav.Link>
+                <Nav.Link as={Link} to='/portal/login'>Login</Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>

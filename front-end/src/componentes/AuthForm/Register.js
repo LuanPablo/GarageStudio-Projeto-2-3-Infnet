@@ -1,22 +1,20 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { LoginForm } from "./LoginForm";
+import { Layout } from "../Layout";
 import { RegisterForm } from "./RegisterForm";
 
-export function AuthForm ({ redirectAfterLogin = true }) {
-  return (
-    <Row>
-      <Col xs={12} lg='auto' className="flex-fill">
-        <LoginForm redirectAfterLogin={redirectAfterLogin} />
-      </Col>
-      <Divider xs={12} lg='auto'>
-        ou
-      </Divider>
-      <Col xs={12} lg='auto' className="flex-fill">
-        <RegisterForm redirectAfterLogin={redirectAfterLogin} />
-      </Col>
-    </Row>
-  )
+export function AuthForm({ redirectAfterLogin = true }) {
+    return (
+        <Layout>
+            <Container>
+                <Row>
+                    <Col xs={12} lg='auto' className="flex-fill">
+                        <RegisterForm redirectAfterLogin={redirectAfterLogin} />
+                    </Col>
+                </Row>
+            </Container>
+        </Layout>
+    )
 }
 
 const Divider = styled(Col)`

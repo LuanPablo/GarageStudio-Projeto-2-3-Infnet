@@ -1,19 +1,15 @@
 import { Container } from "react-bootstrap"
 import styled from "styled-components"
-import { AuthForm } from "../../components/AuthForm"
+import { AuthForm } from "../../componentes/AuthForm/Login"
 
-export function LoginView () {
+export function LoginView() {
   return (
-    <Background>
-      <Container className='bg-white rounded p-3 p-md-5'>
-        <AuthForm />
-      </Container>
-    </Background>
+    <AuthForm />
   )
 }
 
 const Background = styled.main`
-  background: linear-gradient(180deg, #35ADE2 0%, #7BC8EA 100%);
+  background-color: #1D182C;
   display: flex;
   justify-content: center;
   align-items: center;

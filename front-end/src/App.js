@@ -15,7 +15,8 @@ function App() {
       <Route path='*' element={<NotFoundView />} />
       <Route path='/portal/login' element={<LoginView />} />
       <Route path='/studios/:id' element={<StudioDetailView />} />
-      <Route path='/portal' element={
+      <Route path='/portal' 
+      element={
         <PrivateRoute>
           <DashboardView />
         </PrivateRoute>

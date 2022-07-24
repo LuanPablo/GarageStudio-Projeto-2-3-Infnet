@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { login } from "../../services/Users.service";
 import { useNavigate } from "react-router-dom"
 import { userLogin } from "../../store/User/User.actions";
+import styled from "styled-components";
 
 export function LoginForm ({ redirectAfterLogin }) {
   const [isSubmiting, setIsSubmiting] = useState(false)
@@ -41,7 +42,7 @@ export function LoginForm ({ redirectAfterLogin }) {
   }
   return (
     <Form onSubmit={handleSubmit}>
-      <p className="h4">Login</p>
+      <p className="h4">Faça seu Login</p>
       <Form.Group controlId="login-email" className="mb-3">
         <Form.Label className="m-0">E-mail</Form.Label>
         <Form.Control
@@ -69,3 +70,8 @@ export function LoginForm ({ redirectAfterLogin }) {
 
   )
 }
+
+
+const text = styled.p`
+  color: #fff; 
+`
