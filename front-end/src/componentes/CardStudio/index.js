@@ -15,7 +15,7 @@ export function CardStudio ({studios}) {
                     <h7>Gravação e Regravação</h7>
                     <h7>Mixagem e masterização</h7>
                 </Card.Text>
-                <BtnStyled className="text-center mt-4" as={Link} to={`/schedulings/studioId/${studios.id}`}>Agendar</BtnStyled>
+                <BtnStyled className="text-center mt-4" as={Link} to={`/portal/schedulings/studioId/${studios.id}`}>Agendar</BtnStyled>
             </Card.Body>
         </Card>
     )

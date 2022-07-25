@@ -20,7 +20,7 @@ export function Header () {
             <Nav.Link as={Link} to='/'>Home</Nav.Link>
             <Nav.Link as={Link} to='/studios'>Agendar</Nav.Link>
               {isUserLoggedIn ? (
-                <Nav.Link as={Link} to='/portal'>Entrar</Nav.Link>
+                <Nav.Link as={Link} to='/portal'>Dashboard</Nav.Link>
               ) : (
                 <Nav.Link as={Link} to='/portal/login'>Login</Nav.Link>
               )}

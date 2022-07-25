@@ -29,7 +29,7 @@ export function LoginForm({ redirectAfterLogin }) {
       // Enviar para o redux
       dispatch(userLogin(userData))
       if (redirectAfterLogin) {
-        navigate('/portal')
+        navigate('/studios')
       }
     } catch (error) {
       const message = error.message === 'Credentials invalid.'
