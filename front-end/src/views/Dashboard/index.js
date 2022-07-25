@@ -2,8 +2,7 @@ import { Alert } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { LayoutPortal } from "../../componentes/LayoutPortal"
 import { selectUser } from "../../store/User/User.selectors"
-import { Layout } from "../../componentes/Layout";
-import { Header } from "../../componentes/Layout/Header";
+
 
 export function DashboardView() {
   const user = useSelector(selectUser)

@@ -70,7 +70,7 @@ export function LoginForm({ redirectAfterLogin }) {
             </Form.Group>
             <FormGroup className="d-flex flex-column">
               <BtnStyled className="mt-4" type='submit' disabled={isSubmiting}>Coninuar</BtnStyled>
-              <Link className="mt-4 text-center text-white" as={Link} to="/portal/register">Não possuo cadastro </Link>
+              <Link className="mt-4 text-center text-white" as={Link} to="/portal/register">Não possuo cadastro</Link>
             </FormGroup>
 
           </Form>

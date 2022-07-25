@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "json-server-auth --watch db.json --port $PORT --host 0.0.0.0 -r routes.json",
-    "start-dev": "json-server-auth --watch db.json --port 3001"
+    "start-dev": "json-server-auth --watch db.json --port 3001 -r routes.json"
   },
   "keywords": [],
   "author": "",

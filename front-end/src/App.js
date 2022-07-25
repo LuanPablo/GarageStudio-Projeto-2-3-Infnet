@@ -7,6 +7,7 @@ import { NotFoundView } from "./views/NotFound";
 import { StudioDetailView } from "./views/StudioDetail";
 import { StudiosView } from "./views/Studios";
 import { RegisterView } from "./views/Register";
+import { SchedulingView } from "./views/SchedulingView";
 
 
 
@@ -17,15 +18,21 @@ function App() {
       <Route path='/studios' element={<StudiosView />} />
       <Route path='*' element={<NotFoundView />} />
       <Route path='/portal/login' element={<LoginView />} />
-      <Route path='/studios/:id' element={<StudioDetailView />} />
+      <Route path='/schedulings/studioId/:id' element={<StudioDetailView />} />
       <Route path='/portal/register' element={<RegisterView />} />
       <Route path='/portal' 
       element={
-        <PrivateRoute>
+        // <PrivateRoute>
           <DashboardView />
-        </PrivateRoute>
+        // </PrivateRoute>
       } 
       />
+      <Route path='/portal/schedulings' 
+      element={
+        // <PrivateRoute>
+          <SchedulingView />
+        // </PrivateRoute>
+      }/>
     </Routes>
   )
 }

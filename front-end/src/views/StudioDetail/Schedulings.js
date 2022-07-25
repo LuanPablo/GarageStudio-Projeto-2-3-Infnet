@@ -19,10 +19,10 @@ export function Schedulings({ schedulings }) {
     }
     return (
         <>
-            <h2 className="text-white mt-5 mb-5 text-align-center">Horários disponíveis</h2>
+            <h2 className="text-white mt-5 mb-5 text-center">Horários disponíveis</h2>
             {schedulings.length > 0 ? (
 
-                <Table className="text-white" responsive>
+                <Table className="text-white shadow border" responsive>
                     <thead >
                         <tr>
                             <th>Serviço</th>

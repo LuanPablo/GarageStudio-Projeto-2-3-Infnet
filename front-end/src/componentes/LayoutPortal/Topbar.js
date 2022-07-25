@@ -21,7 +21,7 @@ export function Topbar({ onOpen }) {
         <Navbar.Toggle onClick={onOpen} />
         <Nav className="ms-auto">
           <Dropdown align='end'>
-            <Dropdown.Toggle variant='light'>{user.name}</Dropdown.Toggle>
+            <Dropdown.Toggle  variant='light'>{user.name}</Dropdown.Toggle>
             <MenuStyled>
               <Dropdown.Item onClick={handleLogout}>Sair</Dropdown.Item>
             </MenuStyled>
