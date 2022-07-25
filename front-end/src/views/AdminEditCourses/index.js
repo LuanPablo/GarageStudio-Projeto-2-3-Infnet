@@ -3,27 +3,27 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { LayoutPortal } from "../../components/LayoutPortal";
 import { Loading } from "../../components/Loading";
-import { UpsertStudioForm } from "../../components/UpsertStudioForm";
-import { getStudioById, updateStudio } from "../../services/Studios.service";
+import { UpsertCourseForm } from "../../components/UpsertCourseForm";
+import { getCourseById, updateCourse } from "../../services/Courses.service";
 
-export function AdminEditStudioView () {
+export function AdminEditCourseView () {
   const { id } = useParams()
-  const [studio, setStudio] = useState()
+  const [course, setCourse] = useState()
   useEffect(() => {
-    const fetchStudio = async () => {
+    const fetchCourse = async () => {
       try {
-        const studioData = await getStudioById(id)
-        setStudio(studioData)
+        const courseData = await getCourseById(id)
+        setCourse(courseData)
       } catch {
         toast.error('Falha ao buscar dados do curso. Recarregue a página.')
       }
     }
-    fetchStudio()
+    fetchCourse()
   }, [id])
   const navigate = useNavigate()
   const handleSubmit = async (formData) => {
     try {
-      await updateStudio(id, formData)
+      await updateCourse(id, formData)
       toast.success('Curso alterado com sucesso.')
       navigate('/portal/cursos')
     } catch {
@@ -33,14 +33,14 @@ export function AdminEditStudioView () {
   return (
     <LayoutPortal>
       <h1 className="mt-4">Editar curso</h1>
-      {studio ? (
-        <UpsertStudioForm
+      {course ? (
+        <UpsertCourseForm
           initialValue={{
-            name: studio.name,
-            coordinator: studio.coordinator,
-            shortDescription: studio.shortDescription,
-            description: studio.description,
-            image: studio.image
+            name: course.name,
+            coordinator: course.coordinator,
+            shortDescription: course.shortDescription,
+            description: course.description,
+            image: course.image
           }}
           buttonLabel='Alterar'
           onSubmit={handleSubmit}

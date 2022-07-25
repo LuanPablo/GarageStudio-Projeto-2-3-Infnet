@@ -1,95 +1,126 @@
 {
-
-    "studios": [
-        {
-            "image": "/img/mesquita.png",
-            "name": "Mesquita GS",
-            "shortDescription": "Bla",
-            "id": 1
-        },
-        {
-            "image": "/img/cachambi.png",
-            "name": "Cachambi GS",
-            "shortDescription": "Bla",
-            "id": 2
-        },
-        {
-            "image": "/img/afranio.png",
-            "name": "Afrânio Franco GS",
-            "shortDescription": "Bla",
-            "id": 3
-        },
-        {
-            "image": "/img/senhor.png",
-            "name": "Senhor dos Passos GS",
-            "shortDescription": "Bla",
-            "id": 4
-        },
-        {
-            "image": "/img/madureira.png",
-            "name": "Madureira GS",
-            "shortDescription": "Bla",
-            "id": 5
-        },
-        {
-            "image": "/img/copacabana.png",
-            "name": "Copacabana GS",
-            "shortDescription": "Bla",
-            "id": 6
-        } 
-    ],
-    "schedulings":[
-        {
-            "service": "Ensaio",
-            "day": "10/07/2022",
-            "hour": "16:00",
-            "scheduling": "true",
-            "studioId": 1,
-            "id":7
-        },
-        {
-            "service": "Ensaio",
-            "day": "11/07/2022",
-            "hour": "16:00",
-            "scheduling": "true",
-            "studioId": 2,
-            "id":8   
-        },
-        {
-            "service": "Ensaio",
-            "day": "11/07/2022",
-            "hour": "16:00",
-            "scheduling": "true",
-            "studioId": 3,
-            "id":9  
-        },
-        {
-            "service": "Ensaio",
-            "day": "11/07/2022",
-            "hour": "16:00",
-            "scheduling": "true",
-            "studioId": 4,
-            "id":10  
-        },
-        {
-            "service": "Ensaio",
-            "day": "11/07/2022",
-            "hour": "16:00",
-            "scheduling": "true",
-            "studioId": 5,
-            "id":11  
-        },
-        {
-            "service": "Ensaio",
-            "day": "11/07/2022",
-            "hour": "16:00",
-            "scheduling": "true",
-            "studioId": 6,
-            "id":12   
-        }
-        
-    ],
-
+  "studios": [
+    {
+      "image": "/img/mesquita.png",
+      "name": "Mesquita GS",
+      "shortDescription": "SERVIÇOS",
+      "id": 1
+    },
+    {
+      "image": "/img/cachambi.png",
+      "name": "Cachambi GS",
+      "id": 2
+    },
+    {
+      "image": "/img/afranio.png",
+      "name": "Afrânio Franco GS",
+      "id": 3
+    },
+    {
+      "image": "/img/senhor.png",
+      "name": "Senhor dos Passos GS",
+      "id": 4
+    },
+    {
+      "image": "/img/madureira.png",
+      "name": "Madureira GS",
+      "id": 5
+    },
+    {
+      "image": "/img/copacabana.png",
+      "name": "Copacabana GS",
+      "id": 6
+    }
+  ],
+  "schedulings": [
+    {
+      "service": "Ensaio",
+      "day": "10/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 1,
+      "id": 7
+    },
+    {
+      "service": "Ensaio",
+      "day": "11/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 2,
+      "id": 8
+    },
+    {
+      "service": "Ensaio",
+      "day": "11/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 3,
+      "id": 9
+    },
+    {
+      "service": "Ensaio",
+      "day": "11/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 4,
+      "id": 10
+    },
+    {
+      "service": "Ensaio",
+      "day": "11/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 5,
+      "id": 11
+    },
+    {
+      "service": "Ensaio",
+      "day": "11/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 6,
+      "id": 12
+    },
+    {
+      "service": "Ensaio",
+      "day": "10/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 1,
+      "user": {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTY1ODY4NjU4NCwiZXhwIjoxNjU4NjkwMTg0LCJzdWIiOiIyIn0.erKTUuGkLl1wd51u2zf4fhyT6BUEu98SJGky4nXsTGI",
+        "email": "admin@admin.com",
+        "name": "Administrador",
+        "type": "1",
+        "id": 2
+      },
+      "id": 13
+    },
+    {
+      "service": "Ensaio",
+      "day": "10/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 1,
+      "user": {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTY1ODY4NjU4NCwiZXhwIjoxNjU4NjkwMTg0LCJzdWIiOiIyIn0.erKTUuGkLl1wd51u2zf4fhyT6BUEu98SJGky4nXsTGI",
+        "email": "admin@admin.com",
+        "name": "Administrador",
+        "type": "1",
+        "id": 2
+      },
+      "id": 14
+    },
+    {
+      "service": "Ensaio",
+      "day": "10/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 1,
+      "user": null,
+      "id": 15
+    }
+  ],
   "users": [
     {
       "email": "cliente@cliente.com",
@@ -104,7 +135,20 @@
       "name": "Administrador",
       "type": "1",
       "id": 2
+    },
+    {
+      "email": "luan.lima@semantix.ai",
+      "password": "$2a$10$sq39t6ciB9IflQZ1ys7BJubQ7/G8/Y8rriqbvgq0OJxUEMcIVBbOi",
+      "name": "Luan Pablo",
+      "type": 2,
+      "id": 3
+    },
+    {
+      "email": "luan.pablo15@hotmail.com",
+      "password": "$2a$10$vCi7opthIKSJpxozhvhGMejJc1lf4sEo5c75hw2aRt/kYj3PiWp3.",
+      "name": "Luan Pablo",
+      "type": 2,
+      "id": 4
     }
   ]
-
 }

@@ -7,7 +7,7 @@ export function HomeView() {
   return (
     <Layout>
       <Container className="container">
-        <div className='d-md-flex my-4 align-items-center banner-home pt-5 '>
+        <div className='d-md-flex my-4 align-items-center banner-home pt-5'>
           <div>
             <img src={Banner} alt='Garage Studio' width={680} height={480} className='img-fluid mt-4' />
           </div>

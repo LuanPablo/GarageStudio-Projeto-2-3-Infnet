@@ -19,6 +19,7 @@ export function AuthForm({ redirectAfterLogin = true }) {
 
 const Divider = styled(Col)`
   text-align: center;
+  color: #fff;
   padding: 16px 0;
   :before, :after {
     content: '';

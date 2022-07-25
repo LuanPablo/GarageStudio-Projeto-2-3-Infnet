@@ -1,7 +1,10 @@
 import { apiUrl, getAuthorizationHeaders } from "./Api.service"
 
+
 export const getStudios = async () => {
+ 
   const response = await fetch(`${apiUrl}/studios`)
+
   if (!response.ok) {
     throw new Error('Response not ok.')
   }

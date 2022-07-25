@@ -6,6 +6,9 @@ import { LoginView } from "./views/Login";
 import { NotFoundView } from "./views/NotFound";
 import { StudioDetailView } from "./views/StudioDetail";
 import { StudiosView } from "./views/Studios";
+import { RegisterView } from "./views/Register";
+
+
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
       <Route path='*' element={<NotFoundView />} />
       <Route path='/portal/login' element={<LoginView />} />
       <Route path='/studios/:id' element={<StudioDetailView />} />
+      <Route path='/portal/register' element={<RegisterView />} />
       <Route path='/portal' 
       element={
         <PrivateRoute>

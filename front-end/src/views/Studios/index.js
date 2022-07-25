@@ -26,7 +26,7 @@ export function StudiosView() {
     return (
         <Layout>
             <Container>
-                <h2 className="text-center mt-4">Escolha seu estúdio</h2>
+                <h2 className="text-center mt-5 mb-5 text-white">Escolha seu estúdio</h2>
                 {loading && (<Loading />)}
                 {erroMsg && (
                     <Alert variant="danger">{erroMsg}</Alert>

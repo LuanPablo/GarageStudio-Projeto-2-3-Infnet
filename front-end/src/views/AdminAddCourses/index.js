@@ -1,16 +1,16 @@
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { LayoutPortal } from '../../components/LayoutPortal'
-import { UpsertStudioForm } from '../../components/UpsertStudioForm'
-import { createStudio } from '../../services/Studios.service'
+import { UpsertCourseForm } from '../../components/UpsertCourseForm'
+import { createCourse } from '../../services/Courses.service'
 
-export function AdminAddStudioView () {
+export function AdminAddCourseView () {
   const navigate = useNavigate()
   const handleSubmit = async (formData) => {
     try {
-      await createStudio(formData)
+      await createCourse(formData)
       toast.success('Curso cadastrado com sucesso.')
-      navigate('/portal/studios')
+      navigate('/portal/cursos')
     } catch {
       toast.error('Falha ao cadastrar curso. Tente novamente.')
     }
@@ -18,7 +18,7 @@ export function AdminAddStudioView () {
   return (
     <LayoutPortal>
       <h1 className='mt-4'>Novo curso</h1>
-      <UpsertStudioForm onSubmit={handleSubmit} />
+      <UpsertCourseForm onSubmit={handleSubmit} />
     </LayoutPortal>
   )
 }
