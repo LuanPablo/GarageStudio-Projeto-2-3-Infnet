@@ -7,7 +7,7 @@ import { NotFoundView } from "./views/NotFound";
 import { StudioDetailView } from "./views/StudioDetail";
 import { StudiosView } from "./views/Studios";
 import { RegisterView } from "./views/Register";
-import { SchedulingView } from "./views/SchedulingView";
+import { SchedulingView } from "./views/Scheduling";
 
 
 
