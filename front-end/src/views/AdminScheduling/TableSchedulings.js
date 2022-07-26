@@ -1,11 +1,18 @@
 
 import { Alert, Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { deleteScheduling } from "../../services/Schedulings.service";
 
 
-export function TableSchedulings({ schedulings, studios }) {
-const handleClick = (scheduling) =>{
-  
+export function TableSchedulings({ schedulings, onDeleteScheduling }) {
+const handleClick = async (scheduling) =>{
+    try {
+      await deleteScheduling(scheduling.id)
+      await onDeleteScheduling()
+    } catch {
+      toast.error('Falha ao cancelar agendamento.')
+    }
 } 
   return (
     <>

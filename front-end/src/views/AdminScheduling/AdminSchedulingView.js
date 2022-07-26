@@ -15,31 +15,20 @@ export function AdminSchedulingsView() {
     const [loadingStudio, setLoadingStudio] = useState(true)
     const [erroMsg, setErrorMsg] = useState()
 
+    const fetchScheduling = async () => {
+        try {
+            const data = await getSchedulings()
+            setSchedulings(data)
+            console.log(data)
+        } catch (error) {
+            toast.error('Falha ao buscar horários')
+        }
+        setLoadingScheduling(false)
+    }
     useEffect(() => {
-        const fetchScheduling = async () => {
-            try {
-                const data = await getSchedulings()
-                setSchedulings(data)
-                console.log(data)
-            } catch (error) {
-                toast.error('Falha ao buscar horários')
-            }
-            setLoadingScheduling(false)
-        }
+
         fetchScheduling()
-    
-        const fetchStudios = async () =>{
-            try {
-                const data = await getStudios()
-                setStudios(data)
-                console.log(data)
-            } catch (error) {
-                setErrorMsg('Recarregue a página')
-            }
-            setLoadingStudio(false)
-        }
-        fetchStudios()
-        
+
     }, [])
 
     return (
@@ -50,7 +39,7 @@ export function AdminSchedulingsView() {
                 buttonLink='/portal/novoagendamento'
             />
             {loadingScheduling && <Loading />}
-            <TableSchedulings  schedulings={schedulings}/>
+            <TableSchedulings schedulings={schedulings} onDeleteScheduling={fetchScheduling} />
             {/* <BtnStyled>Cadastrar novo horário</BtnStyled> */}
         </LayoutPortal>
     )
@@ -60,7 +49,7 @@ export function AdminSchedulingsView() {
 // const BtnStyled = styled.button`
 //   background-color: #8672ED;
 //   color: #fff;
-//   border-radius: 3.125rem;  
+//   border-radius: 3.125rem;
 //   width: 20.938rem;
 //   padding: 0.5rem;
 // `
