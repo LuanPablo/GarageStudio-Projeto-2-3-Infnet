@@ -8,14 +8,14 @@ const menuItems = [
     {
         to:'/portal',
         text: 'Dashboard',
-        checkAllPath: false,
+        checkAllPath: true,
         userTypes: [1, 2]
     },
     {
         to: '/portal/schedulings',
         text: 'Agendamentos',
-        checkAllPath: true,
-        userTypes: [1, 2]
+        checkAllPath: false,
+        userTypes: [1]
     }
 ]
 
