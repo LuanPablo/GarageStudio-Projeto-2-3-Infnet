@@ -16,12 +16,14 @@ export function StudiosView() {
             try {
                 const data = await getStudios()
                 setStudios(data)
+                console.log(data)
             } catch (error) {
                 setErrorMsg('Recarregue a página')
             }
             setLoading(false)
         }
         fetchStudios()
+        
     }, [])
     return (
         <Layout>

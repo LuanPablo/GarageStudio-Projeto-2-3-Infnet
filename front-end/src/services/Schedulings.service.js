@@ -1,13 +1,22 @@
 import { apiUrl, getAuthorizationHeaders } from "./Api.service"
 
-export const deleteScheduling = async schedulingsId => {
-  const response = await fetch(`${apiUrl}/schedulings/${schedulingsId}`, {
-    method: 'DELETE',
-    headers: getAuthorizationHeaders()
-  })
+//retorna agendamentos
+export const getSchedulings = async () => {
+ 
+  const response = await fetch(`${apiUrl}/schedulings`)
+
   if (!response.ok) {
     throw new Error('Response not ok.')
   }
+  return response.json()
+}
+
+export const getSchedulingById = async (schedulingId) => {
+  const response = await fetch(`${apiUrl}/schedulings/${schedulingId}?_embed=schedulings`)
+  if (!response.ok) {
+    throw new Error('Response not ok.')
+  }
+  return response.json()
 }
 
 export const createScheduling = async schedulingData => {
@@ -19,6 +28,16 @@ export const createScheduling = async schedulingData => {
       'content-type': 'application/json',
       ...getAuthorizationHeaders()
     }
+  })
+  if (!response.ok) {
+    throw new Error('Response not ok.')
+  }
+}
+
+export const deleteScheduling = async schedulingsId => {
+  const response = await fetch(`${apiUrl}/schedulings/${schedulingsId}`, {
+    method: 'DELETE',
+    headers: getAuthorizationHeaders()
   })
   if (!response.ok) {
     throw new Error('Response not ok.')
