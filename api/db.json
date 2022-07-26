@@ -143,6 +143,21 @@
         "id": 4
       },
       "id": 17
+    },
+    {
+      "service": "Ensaio",
+      "day": "10/07/2022",
+      "hour": "16:00",
+      "scheduling": "true",
+      "studioId": 1,
+      "user": {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1YW4ucGFibG8xNUBob3RtYWlsLmNvbSIsImlhdCI6MTY1ODc4NzcxNywiZXhwIjoxNjU4NzkxMzE3LCJzdWIiOiI0In0.Da1rXZQJ8ijDJdytEMwPoaQpXFjQuTReHwnWUP3bJjM",
+        "email": "luan.pablo15@hotmail.com",
+        "name": "Luan Pablo",
+        "type": 2,
+        "id": 4
+      },
+      "id": 18
     }
   ],
   "users": [
