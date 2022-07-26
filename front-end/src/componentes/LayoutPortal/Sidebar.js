@@ -6,16 +6,16 @@ import { selectUser } from '../../store/User/User.selectors'
 
 const menuItems = [
     {
-        to: '/portal',
+        to:'/portal',
         text: 'Dashboard',
-        checkAllPath: true,
+        checkAllPath: false,
         userTypes: [1, 2]
     },
     {
         to: '/portal/schedulings',
         text: 'Agendamentos',
-        checkAllPath: false,
-        userTypes: [1]
+        checkAllPath: true,
+        userTypes: [1, 2]
     }
 ]
 

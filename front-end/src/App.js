@@ -8,6 +8,7 @@ import { StudioDetailView } from "./views/StudioDetail";
 import { StudiosView } from "./views/Studios";
 import { RegisterView } from "./views/Register";
 import { SchedulingView } from "./views/Scheduling";
+import { AdminSchedulingsView } from "./views/AdminScheduling/AdminSchedulingView";
 
 
 
@@ -20,12 +21,14 @@ function App() {
       <Route path='/portal/login' element={<LoginView />} />
       <Route path='/portal/schedulings/studioId/:id' 
       element={
+        
         <PrivateRoute>
           <StudioDetailView />
         </PrivateRoute>
       }
       />
       <Route path='/portal/register' element={<RegisterView />} />
+
       <Route path='/portal' 
       element={
         <PrivateRoute>
@@ -36,7 +39,7 @@ function App() {
       <Route path='/portal/schedulings' 
       element={
         <PrivateRoute>
-          <SchedulingView />
+          <AdminSchedulingsView />
         </PrivateRoute>
       }/>
     </Routes>

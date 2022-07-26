@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { Navigate } from "react-router-dom"
 import { selectUser } from "../../store/User/User.selectors"
+import { userTypes } from "../LayoutPortal/Sidebar"
 
 export function PrivateRoute ({ children, userTypes }) {
   const user = useSelector(selectUser)
