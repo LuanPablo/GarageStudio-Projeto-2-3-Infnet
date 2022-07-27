@@ -2,32 +2,32 @@
   "studios": [
     {
       "image": "/img/mesquita.png",
-      "name": "Mesquita GS",
+      "name": "Mesquita",
       "id": 1
     },
     {
       "image": "/img/cachambi.png",
-      "name": "Cachambi GS",
+      "name": "Cachambi",
       "id": 2
     },
     {
       "image": "/img/afranio.png",
-      "name": "Afrânio Franco GS",
+      "name": "Afrânio Franco",
       "id": 3
     },
     {
       "image": "/img/senhor.png",
-      "name": "Senhor dos Passos GS",
+      "name": "Senhor dos Passos",
       "id": 4
     },
     {
       "image": "/img/madureira.png",
-      "name": "Madureira GS",
+      "name": "Madureira",
       "id": 5
     },
     {
       "image": "/img/copacabana.png",
-      "name": "Copacabana GS",
+      "name": "Copacabana",
       "id": 6
     }
   ],
@@ -36,7 +36,6 @@
       "service": "Ensaio",
       "day": "10/07/2022",
       "hour": "16:00",
-      "scheduling": "true",
       "studioId": 1,
       "id": 7
     },
@@ -44,7 +43,6 @@
       "service": "Ensaio",
       "day": "11/07/2022",
       "hour": "16:00",
-      "scheduling": "true",
       "studioId": 2,
       "id": 8
     },
@@ -52,7 +50,6 @@
       "service": "Ensaio",
       "day": "11/07/2022",
       "hour": "16:00",
-      "scheduling": "true",
       "studioId": 3,
       "id": 9
     },
@@ -60,7 +57,6 @@
       "service": "Ensaio",
       "day": "11/07/2022",
       "hour": "16:00",
-      "scheduling": "true",
       "studioId": 4,
       "id": 10
     },
@@ -68,95 +64,8 @@
       "service": "Ensaio",
       "day": "11/07/2022",
       "hour": "16:00",
-      "scheduling": "true",
       "studioId": 5,
       "id": 11
-    },
-    {
-      "service": "Ensaio",
-      "day": "11/07/2022",
-      "hour": "16:00",
-      "scheduling": "true",
-      "studioId": 6,
-      "id": 12
-    },
-    {
-      "service": "Ensaio",
-      "day": "10/07/2022",
-      "hour": "16:00",
-      "scheduling": "true",
-      "studioId": 1,
-      "user": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTY1ODY4NjU4NCwiZXhwIjoxNjU4NjkwMTg0LCJzdWIiOiIyIn0.erKTUuGkLl1wd51u2zf4fhyT6BUEu98SJGky4nXsTGI",
-        "email": "admin@admin.com",
-        "name": "Administrador",
-        "type": "1",
-        "id": 2
-      },
-      "id": 13
-    },
-    {
-      "service": "Ensaio",
-      "day": "10/07/2022",
-      "hour": "16:00",
-      "scheduling": "true",
-      "studioId": 1,
-      "user": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTY1ODY4NjU4NCwiZXhwIjoxNjU4NjkwMTg0LCJzdWIiOiIyIn0.erKTUuGkLl1wd51u2zf4fhyT6BUEu98SJGky4nXsTGI",
-        "email": "admin@admin.com",
-        "name": "Administrador",
-        "type": "1",
-        "id": 2
-      },
-      "id": 14
-    },
-    {
-      "service": "Ensaio",
-      "day": "10/07/2022",
-      "hour": "16:00",
-      "scheduling": "true",
-      "studioId": 1,
-      "user": null,
-      "id": 15
-    },
-    {
-      "service": "Ensaio",
-      "day": "10/07/2022",
-      "hour": "16:00",
-      "scheduling": "true",
-      "studioId": 1,
-      "user": null,
-      "id": 16
-    },
-    {
-      "service": "Ensaio",
-      "day": "10/07/2022",
-      "hour": "16:00",
-      "scheduling": "true",
-      "studioId": 1,
-      "user": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1YW4ucGFibG8xNUBob3RtYWlsLmNvbSIsImlhdCI6MTY1ODczMjQxMCwiZXhwIjoxNjU4NzM2MDEwLCJzdWIiOiI0In0.GQIFOAehx4sSZBEjbdWiJUQJYZ4uC9f7_KkNTlkkHWM",
-        "email": "luan.pablo15@hotmail.com",
-        "name": "Luan Pablo",
-        "type": 2,
-        "id": 4
-      },
-      "id": 17
-    },
-    {
-      "service": "Ensaio",
-      "day": "10/07/2022",
-      "hour": "16:00",
-      "scheduling": "true",
-      "studioId": 1,
-      "user": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1YW4ucGFibG8xNUBob3RtYWlsLmNvbSIsImlhdCI6MTY1ODc4NzcxNywiZXhwIjoxNjU4NzkxMzE3LCJzdWIiOiI0In0.Da1rXZQJ8ijDJdytEMwPoaQpXFjQuTReHwnWUP3bJjM",
-        "email": "luan.pablo15@hotmail.com",
-        "name": "Luan Pablo",
-        "type": 2,
-        "id": 4
-      },
-      "id": 18
     }
   ],
   "users": [
