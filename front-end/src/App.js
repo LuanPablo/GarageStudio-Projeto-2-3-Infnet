@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import { PrivateRoute } from "./componentes/PrivateRoute";
 import { DashboardView } from "./views/Dashboard";
 import { HomeView } from "./views/Home";
@@ -9,7 +9,8 @@ import { StudiosView } from "./views/Studios";
 import { RegisterView } from "./views/Register";
 import { AdminSchedulingsView } from "./views/AdminScheduling/AdminSchedulingView";
 import { NewSchedulingView } from "./views/NewScheduling";
-
+import { AdminAddSchedulingView } from "./views/AdminAddScheduling/AdminAddSchedulingView";
+import { AdminEditCourseView, AdminEditSchedulingView } from "./views/AdminEditScheduling/AdminEditSchedulingView";
 
 
 function App() {
@@ -37,14 +38,20 @@ function App() {
       />
       <Route path='/portal/schedulings'
         element={
-          <PrivateRoute>
+          <PrivateRoute userTypes={[1]}>
             <AdminSchedulingsView />
           </PrivateRoute>
         } />
-      <Route path='/portal/novoagendamento'
+      <Route path='/portal/newscheduling'
+        element={
+          <PrivateRoute userTypes={[1]}>
+            <AdminAddSchedulingView />
+          </PrivateRoute>
+        } />
+        <Route path='/portal/scheduling/:id'
         element={
           <PrivateRoute>
-            <NewSchedulingView />
+            <AdminEditSchedulingView />
           </PrivateRoute>
         } />
     </Routes>

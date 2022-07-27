@@ -1,19 +1,28 @@
 
-import { Alert, Button, Table } from "react-bootstrap";
+import { useState } from "react";
+import { Alert, Button, Modal, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { deleteScheduling } from "../../services/Schedulings.service";
 
 
 export function TableSchedulings({ schedulings, onDeleteScheduling }) {
-const handleClick = async (scheduling) =>{
+  
+  const [schedulingToDelete, setSchedulingToDelete] = useState()
+  const hideModal = () => setSchedulingToDelete(undefined)
+  const handleClick = (scheduling) => {
+    setSchedulingToDelete(scheduling)
+  }
+  const handleDelete = async () => {
     try {
-      await deleteScheduling(scheduling.id)
+      await deleteScheduling(schedulingToDelete.id)
       await onDeleteScheduling()
+      toast.success('Serviço deletado com sucesso.')
     } catch {
-      toast.error('Falha ao cancelar agendamento.')
+      toast.error('Falha ao deletar serviço.')
     }
-} 
+    hideModal()
+  }
   return (
     <>
       <Table className="text-white shadow border" responsive>
@@ -36,14 +45,14 @@ const handleClick = async (scheduling) =>{
               <td className="d-grid gap-1 d-sm-table-cell"><Button
                 size="sm"
                 as={Link}
-                to={`/portal/schedulings/${schedulings.id}`}
-                >Editar
-                </Button>
+                to={`/portal/scheduling/${scheduling.id}`}
+              >Editar
+              </Button>
                 <Button
-                size="sm"
-                variant="danger"
-                className="ms-sm-1"
-                onClick={()=>handleClick(scheduling)}
+                  size="sm"
+                  variant="danger"
+                  className="ms-sm-1"
+                  onClick={() => handleClick(scheduling)}
                 >Cancelar
                 </Button>
               </td>
@@ -51,6 +60,16 @@ const handleClick = async (scheduling) =>{
           ))}
         </tbody>
       </Table>
+      <Modal show={schedulingToDelete} onHide={hideModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Tem certeza?</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>O <strong>{schedulingToDelete?.service}</strong> será excluído.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={hideModal}>Cancelar</Button>
+          <Button variant="danger" onClick={handleDelete}>Deletar serviço</Button>
+        </Modal.Footer>
+      </Modal>
     </>
   )
 }

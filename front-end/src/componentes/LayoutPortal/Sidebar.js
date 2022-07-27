@@ -1,12 +1,14 @@
-import { CloseButton, Nav } from "react-bootstrap";
+import { CloseButton, Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import { SidebarItem } from "./Sidebaritem.js";
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../store/User/User.selectors'
+import Logo from '../../Assets/img/logo.png'
+import { Link } from "react-router-dom";
 
 const menuItems = [
     {
-        to:'/portal',
+        to: '/portal',
         text: 'Dashboard',
         checkAllPath: true,
         userTypes: [1, 2]
@@ -24,8 +26,12 @@ export function Sidebar({ isOpen, onClose }) {
     return (
         <SidebarStyled className="bg-dark text-white d-flex flex-column p-3" isOpen={isOpen}>
             <CloseButton variant="white" onClick={onClose} className='ms-auto d-lg-none' />
-            <p className="h2">Garage Studio</p>
+           
+            <Navbar.Brand as={Link} to='/'>
+            <img src={Logo} alt='Garage Studio' width={115} height={19} />
+            </Navbar.Brand>
             <hr />
+
             <Nav variant="pills" className="flex-column">
                 {menuItems.filter(item => item.userTypes.includes(type)).map((item, index) => (
                     <SidebarItem key={index} item={item} />

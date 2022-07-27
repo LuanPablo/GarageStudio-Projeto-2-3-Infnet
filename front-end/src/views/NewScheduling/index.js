@@ -9,8 +9,9 @@ export function NewSchedulingView() {
                 <Container>
                     <Row className="justify-content-md-center mt-5">
                         <Col md="4" lg="4">
+                           
                             <Form >
-                                <p className="h2 text-white text-center mb-4">Cadastrar Novo Horário</p>
+                                <p className="h2 text-white text-center mb-4">Faça seu Login</p>
                                 <FormGroup controlId="login-email" className="mb-3">
                                     <Form.Label className="m-0 text-white mb-3">E-mail</Form.Label>
                                     <Form.Control
