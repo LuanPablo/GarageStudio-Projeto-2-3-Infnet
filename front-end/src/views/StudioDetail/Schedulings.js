@@ -1,22 +1,6 @@
-import { Alert, Button, Card, Container, ListGroup, Table, } from "react-bootstrap";
-import { useSelector } from "react-redux";
-import { createScheduling } from "../../services/Schedulings.service";
-import { selectUser } from "../../store/User/User.selectors";
+import { Alert, Button, Table} from "react-bootstrap";
 
 export function Schedulings({ schedulings }) {
-    // const user = useSelector(selectUser)
-
-    // function handleScheduling() {
-    //     console.log(user)
-    //     createScheduling({
-    //         service: "Ensaio",
-    //         day: "10/07/2022",
-    //         hour: "16:00",
-    //         scheduling: "true",
-    //         studioId: 1,
-    //         user
-    //     })
-    // }
     return (
         <>
             <h2 className="text-white mt-5 mb-5 text-center">Horários disponíveis</h2>
