@@ -1,14 +1,16 @@
 import { useState } from "react"
 import { Button, Col, Form, Row } from "react-bootstrap"
-import { getStudios } from "../../services/Studios.service"
+
 
 
 const emptyFormData = {
-    studioId: '',
+   
     service: '',
     day: '',
     hour: '',
-    
+    local: '',
+    studioId: '',
+    id:''
 }
 export function UpsertSchedulingForm({ initialValue = emptyFormData, buttonLabel = 'Cadastrar', onSubmit}) {
     const [formData, setFormData] = useState(initialValue)
@@ -29,15 +31,14 @@ export function UpsertSchedulingForm({ initialValue = emptyFormData, buttonLabel
                
                 <Form onSubmit={handleSubmit} className="text-white">
                     
-                    <Form.Group className="mb-3" controlId="shedulings-codStudio">
-                        <Form.Label className="mb-0">Código do estúdio</Form.Label>
+                    <Form.Group className="mb-3" controlId="shedulings-local">
+                        <Form.Label className="mb-0">Estúdio</Form.Label>
                         <Form.Control
-                            placeholder="Código do estúdio"
-                            name="codStudio"
-                            value={formData.studioId}
-
+                            placeholder="Mesquita, Niteroi, Madureira, Cachambi..."
+                            name="local"
+                            value={formData.local}
                             onChange={handleChange}
-                            required
+                  
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="shedulings-service">

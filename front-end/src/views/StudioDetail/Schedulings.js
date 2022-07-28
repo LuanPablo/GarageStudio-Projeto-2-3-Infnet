@@ -25,6 +25,7 @@ export function Schedulings({ schedulings }) {
                 <Table className="text-white shadow border" responsive>
                     <thead >
                         <tr>
+                            <th>Estúdio</th>
                             <th>Serviço</th>
                             <th>Dia</th>
                             <th>horário</th>
@@ -34,6 +35,7 @@ export function Schedulings({ schedulings }) {
                     <tbody>
                         {schedulings.map(scheduling => (
                             <tr key={scheduling.id}>
+                                <td>{scheduling.local}</td>
                                 <td>{scheduling.service}</td>
                                 <td>{scheduling.day}</td>
                                 <td>{scheduling.hour}</td>

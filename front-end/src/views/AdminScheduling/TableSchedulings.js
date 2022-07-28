@@ -28,7 +28,7 @@ export function TableSchedulings({ schedulings, onDeleteScheduling }) {
       <Table className="text-white shadow border" responsive>
         <thead >
           <tr>
-            <th>Cod. Estúdio</th>
+            <th>Estúdio</th>
             <th>Serviço</th>
             <th>Dia</th>
             <th>horário</th>
@@ -38,7 +38,7 @@ export function TableSchedulings({ schedulings, onDeleteScheduling }) {
         <tbody>
           {schedulings.map(scheduling => (
             <tr key={scheduling.id}>
-              <td>{scheduling.studioId}</td>
+              <td>{scheduling.local}</td>
               <td>{scheduling.service}</td>
               <td>{scheduling.day}</td>
               <td>{scheduling.hour}</td>

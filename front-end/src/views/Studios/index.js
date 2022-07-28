@@ -27,7 +27,7 @@ export function StudiosView() {
     }, [])
     return (
         <Layout>
-            <Container>
+            <Container className="align-items-center">
                 <h2 className="text-center mt-5 mb-5 text-white">Escolha seu estúdio</h2>
                 {loading && (<Loading />)}
                 {erroMsg && (

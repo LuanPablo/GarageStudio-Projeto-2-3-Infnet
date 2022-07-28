@@ -46,7 +46,7 @@ export const deleteScheduling = async schedulingsId => {
 
 export const updateScheduling = async (schedulingId, schedulingData) => {
   const body = JSON.stringify(schedulingData)
-  const response = await fetch(`${apiUrl}/scheduling/${schedulingId}`, {
+  const response = await fetch(`${apiUrl}/schedulings/${schedulingId}`, {
     method: 'PUT',
     body,
     headers: {

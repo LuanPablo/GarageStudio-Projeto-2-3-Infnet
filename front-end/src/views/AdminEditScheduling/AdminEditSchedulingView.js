@@ -6,7 +6,7 @@ import { Layout } from '../../componentes/Layout'
 import { UpsertSchedulingForm } from '../../componentes/UpsertSchedulingForm'
 import { getSchedulingById, updateScheduling } from '../../services/Schedulings.service'
 import { Loading } from '../../componentes/Loading'
-
+  
 export function AdminEditSchedulingView() {
     const { id } = useParams()
     const [scheduling, setScheduling] = useState()
@@ -40,10 +40,13 @@ export function AdminEditSchedulingView() {
             {scheduling ? (
                 <UpsertSchedulingForm
                     initialValue={{
-                        studioId: scheduling.studioId,
+
                         service: scheduling.service,
                         day: scheduling.day,
                         hour: scheduling.hour,
+                        local: scheduling.local,
+                        studioId: scheduling.studioId,
+                        id: scheduling.id                        
                     }}
                 buttonLabel='Alterar'
                 onSubmit={handleSubmit}

@@ -44,7 +44,7 @@ export function StudioDetailView() {
                     <Alert variant="danger" className="mt-3">{errorMsg}</Alert>
                 ) : (
                     <>
-                        <Schedulings schedulings={studio.schedulings} />
+                        <Schedulings schedulings={studio.schedulings} studios={studio.name}/>
                     </>
                 )}
             </Container>

@@ -8,9 +8,8 @@ import { StudioDetailView } from "./views/StudioDetail";
 import { StudiosView } from "./views/Studios";
 import { RegisterView } from "./views/Register";
 import { AdminSchedulingsView } from "./views/AdminScheduling/AdminSchedulingView";
-import { NewSchedulingView } from "./views/NewScheduling";
 import { AdminAddSchedulingView } from "./views/AdminAddScheduling/AdminAddSchedulingView";
-import { AdminEditCourseView, AdminEditSchedulingView } from "./views/AdminEditScheduling/AdminEditSchedulingView";
+import { AdminEditSchedulingView } from "./views/AdminEditScheduling/AdminEditSchedulingView";
 
 
 function App() {
