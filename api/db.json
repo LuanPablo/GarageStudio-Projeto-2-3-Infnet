@@ -11,13 +11,13 @@
       "id": 2
     },
     {
-      "image": "/img/afranio.png",
-      "name": "Afrânio Franco",
+      "image": "/img/buzios.png",
+      "name": "Búzios",
       "id": 3
     },
     {
-      "image": "/img/senhor.png",
-      "name": "Senhor dos Passos",
+      "image": "/img/niteroi.png",
+      "name": "Niteroi",
       "id": 4
     },
     {
@@ -33,9 +33,10 @@
   ],
   "schedulings": [
     {
-      "service": "Ensaio",
+      "service": "Gravação",
       "day": "10/07/2022",
       "hour": "16:00",
+      "local": "Mesquita",
       "studioId": 1,
       "id": 7
     },
@@ -43,6 +44,7 @@
       "service": "Ensaio",
       "day": "11/07/2022",
       "hour": "16:00",
+      "local": "Cachambi",
       "studioId": 2,
       "id": 8
     },
@@ -50,6 +52,7 @@
       "service": "Ensaio",
       "day": "11/07/2022",
       "hour": "16:00",
+      "local": "Búzios",
       "studioId": 3,
       "id": 9
     },
@@ -57,15 +60,25 @@
       "service": "Ensaio",
       "day": "11/07/2022",
       "hour": "16:00",
+      "local": "Niteroi",
       "studioId": 4,
       "id": 10
     },
     {
-      "service": "Ensaio",
-      "day": "11/07/2022",
-      "hour": "16:00",
+      "service": "Gravação",
+      "day": "31/07/2022",
+      "hour": "17:00",
+      "local": "Madureira",
       "studioId": 5,
       "id": 11
+    },
+    {
+      "service": "Gravação",
+      "day": "31/07/2022",
+      "hour": "17:00",
+      "local": "Copacapana",
+      "studioId": 5,
+      "id": 12
     }
   ],
   "users": [
